@@ -3,7 +3,7 @@
   import { T } from '@threlte/core'
   import { OrbitControls } from '@threlte/extras'
   import type { OrbitControls as OrbitControlsImpl } from 'three/examples/jsm/controls/OrbitControls.js';
-  import { Box3, Group, Vector3 } from 'three';
+  import { Group, Vector3 } from 'three';
 
   export let rotateSpeed: number = 0.3;
   export let zoomToCursor: boolean = false;
@@ -15,7 +15,7 @@
   export let enableZoom: boolean = false;
   export let showGrid: boolean = false;
 
-  export let modelUrl: string = "/animations/scout_taunt_russian.glb";
+  export let modelUrl: string;
 
   let controls: OrbitControls;
   let getModelScene: GetSceneFunction = () => undefined;

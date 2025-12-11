@@ -4,6 +4,9 @@
 	import { Canvas } from '@threlte/core';
 	import Scene from './Scene.svelte';
 
+	// todo: add game stuff + pick animations by the day
+	let modelUrl = "/animations/scout_taunt_russian.glb";
+
 </script>
 
 <div class="grid gap-4">
@@ -20,7 +23,7 @@
 			<WinterDecore />
 			<div class="scene-height">
 				<Canvas>
-					<Scene enableZoom={true}/>
+					<Scene modelUrl={modelUrl}/>
 				</Canvas>
 			</div>
 		</Card.Content>
