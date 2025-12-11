@@ -1,4 +1,4 @@
-import { Axe, GraduationCap, Map, Sparkles, Sword } from 'lucide-svelte';
+import { Axe, GraduationCap, Map, Sparkles, Sword, Clapperboard } from 'lucide-svelte';
 import { useStats } from '$lib/composables/useStats';
 import dayjs from './configs/dayjsConfig';
 
@@ -47,5 +47,14 @@ export const gameModes = [
 		disabled: false,
 		new: dayjs.utc().isBefore(dayjs.utc('2024-08-01'), 'day'),
 		stats: useStats('unusual')
+	},
+	{
+		name: 'Taunt (beta)',
+		href: '/taunt',
+		description: 'Guess the correct taunts',
+		icon: Clapperboard,
+		disabled: false,
+		new: dayjs.utc().isBefore(dayjs.utc('2026-01-01'), 'day'),
+		stats: useStats('taunt')
 	}
 ];

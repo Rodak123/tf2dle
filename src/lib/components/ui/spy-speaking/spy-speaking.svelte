@@ -9,6 +9,7 @@
     const quote = pickRandom(spyQuotes);
 
     let className: $$Props['class'] = undefined;
+    
     export { className as class };
 </script>
 
